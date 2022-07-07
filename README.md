@@ -1,4 +1,4 @@
-# 12345
+# WhisperNote
 
 ## Project setup
 ```
