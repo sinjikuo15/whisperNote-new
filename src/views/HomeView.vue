@@ -1,25 +1,72 @@
 <template>
- <div class="flex justify-center">
+ <div class="flex py-5">
     <!-- sidebar -->
-    <div class=" sm:w-3/12 lg:w-2/12  sidebar bg-pink-100 py-8 ">
-      <h1 class="text-center text-2xl font-bold">WhisperNote</h1>
-      <ul class="py-5 ">
-        <li><a href=""><i class="fa-solid fa-house"></i>Home</a></li>
-        <li><a href=""><i class="fa-solid fa-calendar-days"></i>Calender</a></li>
-        <li><a href=""><i class="fa-solid fa-user"></i>Characters</a></li>
-        <li><a href=""><i class="fa-solid fa-users"></i>Friend</a></li>
-        <li><a href=""><i class="fa-solid fa-file"></i>Profile</a></li>
-      </ul>
-      <div class="user border-t-2 border-red-500 sm:w-3/12 lg:w-2/12 p-2 flex ">
-        <figure class="admin-wrap ml-1 mr-2">
-          <img class="admin" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4pJ34f4qX_Q4eueupI3eMzlB6dBT5DKTsQw&usqp=CAU" alt="">
+    <div class=" sm:w-4/12 lg:w-3/12 xl:w-2/12 border border-gray-200 sidebar  pt-8 ">
+      <div class="flex mr-3 ml-3 ">
+        <figure class="logo-wrap w-2/12 ">
+          <img class="logo" src="../assets/wslogo.jpeg" alt="">          
         </figure>
-        <div class="flex-wrap">
-          <h1 class="font-bold block">username</h1> 
-          <p>view profile</p>  
-        </div>
-           
+        <h1 class="w-9/12 text-2xl md:text-2xl font-black sidebar-title pl-1 pt-1 md:pt-2 xl:pt-1 logo-a">WhisperNote</h1>
       </div>
+      <ul class="pt-5 ">
+        <li class="">
+          <a class="flex " href="">
+            <div class="w-2/12 ">
+              <i class="fa-solid fa-house md:text-xl home"></i>              
+            </div>     
+            <p class="w-9/12 md:text-xl">首頁</p>        
+          </a>          
+        </li>
+        <li class="">
+          <a class="flex" href="">
+            <div class="w-2/12">
+              <i class="fa-solid fa-calendar-days md:text-xl "></i>             
+            </div>     
+            <p class="w-9/12 md:text-xl">日記</p>        
+          </a>          
+        </li>
+        <li class="">
+          <a class="flex" href="">
+            <div class="w-2/12">
+              <i class="fa-solid fa-user md:text-xl"></i>             
+            </div>     
+            <p class="w-9/12 md:text-xl">角色</p>        
+          </a>          
+        </li>
+        <li class="">
+          <a class="flex" href="">
+            <div class="w-2/12">
+              <i class="fa-solid fa-users md:text-xl friends"></i>             
+            </div>     
+            <p class="w-9/12 md:text-xl ">朋友</p>        
+          </a>          
+        </li> 
+        <li class="">
+          <a class="flex" href="">
+            <div class="w-2/12">
+              <i class="fa-solid fa-file md:text-xl"></i>             
+            </div>     
+            <p class="w-9/12 md:text-xl">會員資料</p>        
+          </a>          
+        </li> 
+        <li class="">
+          <a class="flex" href="/signup">
+            <div class="w-2/12">
+              <i class="fa-solid fa-clipboard-check md:text-xl"></i>             
+            </div>     
+            <p class="w-9/12 md:text-xl">註冊</p>        
+          </a>          
+        </li> 
+        <li class="">
+          <a class="flex" href="">
+            <div class="w-2/12">
+              <i class="fa-solid fa-arrow-right-to-bracket md:text-xl login"></i>             
+            </div>     
+            <p class="w-9/12 md:text-xl">登入</p>        
+          </a>          
+        </li>              
+       
+      </ul>      
     </div>
     <!-- 右邊日記的部分 -->
     <div class="w-full sm:w-6/12 border border-gray-400">
@@ -27,6 +74,11 @@
         <h2 class="text-start text-2xl"> ＜ </h2>
         <h1 class="font-bold text-xl">6月 2022</h1>
         <h2 class="font-bold text-2xl"> ＞</h2>
+        <div>
+          <figure>
+            <img src="" alt="">
+          </figure>
+        </div>
       </div>
       <div class="grid grid-flow-col text-center bg-gray-100 text-gray-400 border-t border-b border-gray-300 font-bold">
         <h3 class="w1/7">週日</h3>
@@ -37,7 +89,7 @@
         <h3 class="w1/7">週五</h3>
         <h3 class="w1/7">週六</h3>
       </div>
-      <div class="grid grid-flow-col h-full z-10 overflow-hidden ">
+      <div class="grid grid-flow-col   ">
         <div class="w1/7 vc-day vc-weekday">1</div>
         <div class="w1/7 vc-day">2</div>
         <div class="w1/7 vc-day">3</div>
@@ -52,9 +104,46 @@
 
 <style>
 .sidebar{
-height: 100vh;
+height: 80vh;
 border-radius: 10px 0px 0px 10px;
 }
+.sidebar-title{
+  font-family: 'Prompt', sans-serif;
+}
+.sidebar ul li a{
+  font-weight: 600;
+  padding: 10px 15px 10px 15px;
+  font-size: 1rem;
+  color:rgb(109, 108, 108);
+  margin-left: 12px;
+  margin-right: 12px;
+  border-radius: 10px;
+}
+.sidebar ul li a:hover{
+  color: antiquewhite;
+  background-color: rgb(246, 246, 246);
+  color: black;
+}
+.logo-wrap{
+  width: 50px;        
+    }
+.logo{
+  width: 100%;
+  }
+/* svg位子微調 */
+.home{
+  position: relative;
+  right:2px;
+}
+.friends{
+  position: relative;
+  right:4px;
+}
+.login{
+  position: relative;
+  right:4px;
+}
+/* 日記區 */
 .vc-day {
   padding: 0 5px 3px 5px;
   border-right: 1px solid rgb(175, 175, 175);
@@ -65,31 +154,9 @@ border-radius: 10px 0px 0px 10px;
 .vc-weekday{
   background-color: #eff8ff;
 }
-.sidebar ul li a{
-  display: block;
-  padding: 12px;
-  font-size: 1.2rem;
-}
-.sidebar ul li a:hover{
-  color: antiquewhite;
-  background-color: pink;
-}
-.user{  
-  position: absolute;
-  bottom: 0vh;
-  display: inline-block;
-  align-items:center
-    
-}
-.admin-wrap{
-  width: 75px;
-}
-.admin{
-  width: 100%;
-  border-radius: 50%;
 
-}
-@media screen and (max-width:650px) {
+
+@media screen and (max-width:640px) {
     .sidebar {
         display: none;
     }
