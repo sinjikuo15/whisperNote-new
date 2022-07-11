@@ -87,7 +87,7 @@
         <h3 class="w1/7">週三</h3>
         <h3 class="w1/7">週四</h3>
         <h3 class="w1/7">週五</h3>
-        <h3 class="w1/7">週六</h3>
+        <h3 class="w1/7">週六66666</h3>
       </div>
       <div class="grid grid-flow-col   ">
         <div class="w1/7 vc-day vc-weekday">1</div>
